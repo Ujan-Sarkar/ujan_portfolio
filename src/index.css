@@ -2,95 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Jurassic World Cinematic Design System */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space%20Grotesk:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Palette - Jungle Depths */
+    --background: 180 15% 4%;
+    --foreground: 170 20% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card surfaces - obsidian with teal undertones */
+    --card: 180 20% 6%;
+    --card-foreground: 170 20% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover - glass dark */
+    --popover: 180 25% 5%;
+    --popover-foreground: 170 20% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep Jungle Teal */
+    --primary: 175 70% 35%;
+    --primary-foreground: 180 10% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Jungle Green */
+    --secondary: 160 50% 20%;
+    --secondary-foreground: 170 30% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Foggy depths */
+    --muted: 180 15% 12%;
+    --muted-foreground: 170 15% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Volcanic Orange */
+    --accent: 25 95% 55%;
+    --accent-foreground: 20 10% 10%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive - Warning Red */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI Elements */
+    --border: 175 30% 20%;
+    --input: 180 20% 15%;
+    --ring: 175 70% 45%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom Jurassic Variables */
+    --glow-teal: 175 80% 50%;
+    --glow-orange: 25 100% 60%;
+    --bioluminescent: 165 90% 60%;
+    --hologram: 185 100% 70%;
+    --mist: 180 20% 80%;
+    --obsidian: 180 15% 3%;
+    --stone: 30 10% 25%;
+    --ember: 15 100% 50%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-jungle: linear-gradient(180deg, hsl(180 15% 4%) 0%, hsl(175 30% 8%) 50%, hsl(180 15% 4%) 100%);
+    --gradient-hologram: linear-gradient(135deg, hsl(var(--primary) / 0.3) 0%, hsl(var(--hologram) / 0.1) 50%, hsl(var(--primary) / 0.3) 100%);
+    --gradient-ember: radial-gradient(ellipse at bottom, hsl(var(--ember) / 0.3) 0%, transparent 70%);
+    --gradient-mist: linear-gradient(180deg, hsl(var(--mist) / 0.05) 0%, transparent 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(var(--glow-teal) / 0.4);
+    --shadow-ember: 0 0 40px hsl(var(--ember) / 0.5);
+    --shadow-hologram: 0 0 30px hsl(var(--hologram) / 0.3);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (if needed) */
+    --sidebar-background: 180 15% 5%;
+    --sidebar-foreground: 170 20% 90%;
+    --sidebar-primary: 175 70% 35%;
+    --sidebar-primary-foreground: 180 10% 98%;
+    --sidebar-accent: 180 20% 12%;
+    --sidebar-accent-foreground: 170 20% 90%;
+    --sidebar-border: 175 30% 15%;
+    --sidebar-ring: 175 70% 45%;
   }
 }
 
@@ -99,7 +84,302 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.4);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  /* Holographic Panel */
+  .holo-panel {
+    @apply relative rounded-lg overflow-hidden;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary) / 0.1) 0%,
+      hsl(var(--card)) 50%,
+      hsl(var(--primary) / 0.05) 100%
+    );
+    border: 1px solid hsl(var(--primary) / 0.3);
+    box-shadow: 
+      inset 0 1px 0 hsl(var(--primary) / 0.2),
+      0 0 40px hsl(var(--glow-teal) / 0.1);
+  }
+
+  .holo-panel::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(
+      180deg,
+      hsl(var(--hologram) / 0.05) 0%,
+      transparent 30%,
+      transparent 70%,
+      hsl(var(--hologram) / 0.03) 100%
+    );
+  }
+
+  /* Glassmorphic Card */
+  .glass-card {
+    @apply relative rounded-xl overflow-hidden backdrop-blur-xl;
+    background: hsl(var(--card) / 0.6);
+    border: 1px solid hsl(var(--primary) / 0.2);
+    box-shadow: 
+      0 8px 32px hsl(var(--obsidian) / 0.5),
+      inset 0 1px 0 hsl(var(--primary) / 0.1);
+  }
+
+  /* Containment Chamber */
+  .containment-chamber {
+    @apply relative rounded-lg overflow-hidden transition-all duration-700;
+    background: linear-gradient(
+      180deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--muted)) 100%
+    );
+    border: 2px solid hsl(var(--primary) / 0.2);
+    box-shadow: 
+      inset 0 0 60px hsl(var(--obsidian) / 0.5),
+      0 0 0 1px hsl(var(--primary) / 0.1);
+  }
+
+  .containment-chamber:hover {
+    border-color: hsl(var(--accent) / 0.6);
+    box-shadow: 
+      inset 0 0 80px hsl(var(--primary) / 0.2),
+      0 0 60px hsl(var(--glow-teal) / 0.3),
+      0 0 120px hsl(var(--accent) / 0.1);
+  }
+
+  /* Bioluminescent Glow */
+  .bio-glow {
+    @apply relative;
+  }
+
+  .bio-glow::after {
+    content: '';
+    @apply absolute inset-0 rounded-full blur-xl opacity-60;
+    background: radial-gradient(
+      circle,
+      hsl(var(--bioluminescent) / 0.6) 0%,
+      hsl(var(--primary) / 0.3) 50%,
+      transparent 70%
+    );
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* Scanning Line */
+  .scan-line {
+    @apply absolute left-0 right-0 h-px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--hologram)) 50%,
+      transparent 100%
+    );
+    animation: scan 3s linear infinite;
+  }
+
+  /* Tech Grid Background */
+  .tech-grid {
+    background-image: 
+      linear-gradient(hsl(var(--primary) / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Stone Texture Overlay */
+  .stone-texture {
+    @apply relative;
+  }
+
+  .stone-texture::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none opacity-30;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  /* Text Glow Effects */
+  .text-glow {
+    text-shadow: 
+      0 0 10px hsl(var(--glow-teal) / 0.8),
+      0 0 20px hsl(var(--glow-teal) / 0.6),
+      0 0 40px hsl(var(--glow-teal) / 0.4);
+  }
+
+  .text-glow-orange {
+    text-shadow: 
+      0 0 10px hsl(var(--glow-orange) / 0.8),
+      0 0 20px hsl(var(--glow-orange) / 0.6),
+      0 0 40px hsl(var(--glow-orange) / 0.4);
+  }
+
+  /* Ember Float Animation */
+  .ember-float {
+    animation: ember-rise 8s ease-in-out infinite;
+  }
+
+  /* Mist Drift */
+  .mist-drift {
+    animation: mist-move 20s ease-in-out infinite;
+  }
+
+  /* Hologram Flicker */
+  .holo-flicker {
+    animation: flicker 4s ease-in-out infinite;
+  }
+
+  /* Screen Shake */
+  .screen-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scan {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes ember-rise {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-30px) translateX(10px) scale(1.1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-60px) translateX(-5px) scale(0.9);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-40px) translateX(15px) scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+@keyframes mist-move {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translateX(30px) translateY(-10px);
+    opacity: 0.5;
+  }
+  66% {
+    transform: translateX(-20px) translateY(5px);
+    opacity: 0.2;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.8;
+  }
+  94% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0.9;
+  }
+  97% {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-2px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.7);
 }
