@@ -9,14 +9,23 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: "React", level: 95, category: "Frontend", color: "primary" },
-  { name: "TypeScript", level: 90, category: "Languages", color: "bioluminescent" },
-  { name: "Node.js", level: 85, category: "Backend", color: "accent" },
-  { name: "Python", level: 80, category: "Languages", color: "primary" },
-  { name: "Three.js", level: 75, category: "3D/Graphics", color: "bioluminescent" },
-  { name: "PostgreSQL", level: 85, category: "Database", color: "accent" },
-  { name: "AWS", level: 70, category: "Cloud", color: "primary" },
-  { name: "Docker", level: 80, category: "DevOps", color: "bioluminescent" },
+  { name: "Python", level: 92, category: "Core Language", color: "primary" },
+  { name: "C", level: 75, category: "Core Language", color: "bioluminescent" },
+
+  
+  { name: "Deep Learning", level: 70, category: "AI/ML", color: "primary" },
+  
+  { name: "TensorFlow", level: 65, category: "AI/ML", color: "accent" },
+
+  { name: "Ethereum Fundamentals", level: 70, category: "Blockchain", color: "primary" },
+  { name: "Solidity (Learning)", level: 50, category: "Blockchain", color: "bioluminescent" },
+,
+
+  { name: "Docker", level: 75, category: "DevOps", color: "bioluminescent" },
+  { name: "Git & GitHub", level: 85, category: "DevOps", color: "accent" },
+
+  
+
 ];
 
 const SkillRing = ({ skill, index }: { skill: Skill; index: number }) => {
@@ -202,9 +211,8 @@ export const SkillsSection = () => {
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "GraphQL", "Redis", "MongoDB", "Kubernetes", "Terraform",
-                "Next.js", "Tailwind CSS", "Prisma", "Jest", "Cypress",
-                "Git", "Linux", "Figma", "WebGL"
+                "Linux", "MySQL", "typeScript", "React.js",
+                "Tailwind CSS","Linux", "Figma", 
               ].map((tech, index) => (
                 <motion.span
                   key={tech}

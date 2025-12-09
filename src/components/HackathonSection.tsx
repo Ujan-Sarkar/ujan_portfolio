@@ -17,49 +17,28 @@ interface HackathonTale {
 const hackathonTales: HackathonTale[] = [
   {
     id: 1,
-    title: "Operation: Code Storm",
-    event: "TechCrunch Disrupt Hackathon",
-    date: "March 2024",
-    location: "San Francisco, CA",
-    team: "Team Apex",
-    achievement: "🥇 1st Place",
-    description: "48 hours of pure adrenaline. Built an AI-powered disaster response system that predicts evacuation routes in real-time.",
-    tech: ["React", "TensorFlow", "Node.js", "MapBox"],
-    highlight: "Featured in TechCrunch article"
+    title: "Smart Make-a-Thon",
+    event: "Smart Makers Festival",
+    date: "September 2025",
+    location: "IEM Saltlake,Kolkata ",
+    team: "Team Odyxia",
+    achievement: "🏆 Most Innovative Project",
+    description: "24 hours of pure adrenaline. Built a smart predictive municipality assistance system ",
+    tech: ["Python", "Flask", "HTML", "CSS","JavaScript","Leaflet"],
   },
   {
     id: 2,
-    title: "The Genesis Protocol",
-    event: "ETHGlobal",
-    date: "January 2024",
-    location: "Virtual",
-    achievement: "🏆 Best DeFi Innovation",
-    description: "Created a cross-chain liquidity aggregator that reduced swap fees by 40%. The judges called it 'revolutionary'.",
-    tech: ["Solidity", "React", "The Graph", "Chainlink"],
-    highlight: "$10K Prize Pool Winner"
+    title: "Technologia 1.0",
+    event: "Technologia 1.0",
+    date: "October 2025",
+    location: "UEM Kolkata",
+    team: "Team Odyxia",
+    achievement: "🏆 2nd Runner Up",
+    description: "Built Microclog - the smart system which prevents and tackles the problem of urban waterlogging within 8 hours of brain-storming",
+    tech: ["Solidity", "HTML", "CSS3", "JavaScript","Python","Ethereum"],
+    highlight: "₹10K Prize Pool Winner"
   },
-  {
-    id: 3,
-    title: "Midnight Cipher",
-    event: "NASA Space Apps Challenge",
-    date: "October 2023",
-    location: "Houston, TX",
-    team: "Stellar Coders",
-    achievement: "🌟 Global Finalist",
-    description: "Developed a satellite imagery analysis tool that detects illegal deforestation patterns using machine learning.",
-    tech: ["Python", "TensorFlow", "AWS", "React"],
-    highlight: "Presented at NASA HQ"
-  },
-  {
-    id: 4,
-    title: "Project Thunderbolt",
-    event: "AngelHack Global",
-    date: "July 2023",
-    location: "New York, NY",
-    achievement: "⚡ Best Technical Implementation",
-    description: "Speed-coded a real-time collaboration platform with WebRTC. Zero latency, infinite possibilities.",
-    tech: ["WebRTC", "Socket.io", "React", "Redis"],
-  }
+  
 ];
 
 export const HackathonSection = () => {
@@ -247,10 +226,10 @@ export const HackathonSection = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { icon: Trophy, value: "15+", label: "Hackathons", color: "text-accent" },
-            { icon: Award, value: "8", label: "Wins", color: "text-primary" },
+            { icon: Trophy, value: "5+", label: "Hackathons", color: "text-accent" },
+            { icon: Award, value: "4+", label: "Selections", color: "text-primary" },
             { icon: Target, value: "100+", label: "Hours Coded", color: "text-bioluminescent" },
-            { icon: Users, value: "40+", label: "Teammates", color: "text-ember" },
+            { icon: Users, value: "10+", label: "Teammates", color: "text-ember" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

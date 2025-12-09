@@ -100,7 +100,7 @@ export const HeroSection = () => {
           className="font-orbitron text-6xl md:text-8xl lg:text-9xl font-bold mb-8 relative"
         >
           <span className="text-glow bg-gradient-to-b from-foreground via-primary to-primary/50 bg-clip-text text-transparent drop-shadow-2xl">
-            UJAN
+            UJAN SARKAR
           </span>
           {/* Decorative elements */}
           <motion.span

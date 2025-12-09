@@ -140,22 +140,30 @@ export const ContactSection = () => {
                 <h4 className="font-orbitron text-sm text-muted-foreground mb-4">Direct Channels</h4>
                 <div className="space-y-3">
                   <a
-                    href="mailto:ujan@expedition.dev"
+                    href="mailto:ujan.sarkar2005@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block p-3 rounded-lg bg-muted/20 border border-transparent hover:border-primary/30 transition-colors font-rajdhani text-foreground/80 hover:text-foreground"
                   >
-                    ujan@expedition.dev
+                    ujan.sarkar2005@gmail.com
                   </a>
+
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/ujan-sarkar"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block p-3 rounded-lg bg-muted/20 border border-transparent hover:border-primary/30 transition-colors font-rajdhani text-foreground/80 hover:text-foreground"
                   >
-                    linkedin.com/in/ujan
+                    linkedin.com/in/ujan-sarkar
                   </a>
+
                   <a
-                    href="#"
+                    href="https://github.com/Ujan-Sarkar"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block p-3 rounded-lg bg-muted/20 border border-transparent hover:border-primary/30 transition-colors font-rajdhani text-foreground/80 hover:text-foreground"
                   >
-                    github.com/ujan
+                    github.com/Ujan-Sarkar
                   </a>
                 </div>
               </div>

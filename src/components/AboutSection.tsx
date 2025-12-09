@@ -1,17 +1,18 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Dna, Sparkles, Globe, Award } from "lucide-react";
-import profileAvatar from "@/assets/profile-avatar.png";
+import profileAvatar from "@/assets/profile-pic.png";
 
 export const AboutSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { label: "Years Experience", value: "5+", icon: Sparkles },
-    { label: "Projects Completed", value: "50+", icon: Globe },
-    { label: "Technologies", value: "20+", icon: Dna },
-    { label: "Client Satisfaction", value: "100%", icon: Award },
+    { label: "Years Experience", value: "2+", icon: Sparkles },
+    { label: "Projects Completed", value: "3", icon: Award },
+    { label: "Projects Ongoing", value: "4", icon: Globe },
+    { label: "Technologies", value: "8+", icon: Dna },
+    
   ];
 
   return (
@@ -43,7 +44,7 @@ export const AboutSection = () => {
             About Me
           </h2>
           <p className="text-muted-foreground font-rajdhani text-lg max-w-2xl mx-auto">
-            Step into the research lab and discover the explorer behind the expeditions
+            Step into the control room and meet the architect behind the infrastructure.
           </p>
         </motion.div>
 
@@ -92,7 +93,7 @@ export const AboutSection = () => {
                 <div className="absolute inset-4 rounded-full overflow-hidden">
                   <img 
                     src={profileAvatar} 
-                    alt="Ujan - Digital Explorer" 
+                    alt="Ujan - Digital Architect" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -113,21 +114,21 @@ export const AboutSection = () => {
                   <div className="w-2 h-2 rounded-full bg-bioluminescent animate-pulse" />
                   <div>
                     <span className="text-muted-foreground text-sm font-rajdhani">Designation</span>
-                    <p className="text-foreground font-orbitron">Ujan</p>
+                    <p className="text-foreground font-orbitron">Digital Architect</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 border border-primary/20">
                   <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                   <div>
                     <span className="text-muted-foreground text-sm font-rajdhani">Role</span>
-                    <p className="text-foreground font-orbitron">Full Stack Developer</p>
+                    <p className="text-foreground font-orbitron">Software Developer</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 border border-primary/20">
                   <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <div>
                     <span className="text-muted-foreground text-sm font-rajdhani">Location</span>
-                    <p className="text-foreground font-orbitron">Digital Frontier</p>
+                    <p className="text-foreground font-orbitron">Kolkata, India</p>
                   </div>
                 </div>
               </div>
@@ -142,17 +143,19 @@ export const AboutSection = () => {
             className="space-y-8"
           >
             <div className="glass-card p-8">
-              <h3 className="font-orbitron text-2xl text-primary mb-4">The Explorer</h3>
-              <p className="text-foreground/80 font-rajdhani text-lg leading-relaxed mb-4">
-                Like the pioneers who dared to bring prehistoric wonders back to life, 
-                I specialize in resurrecting bold ideas and transforming them into 
-                living, breathing digital experiences.
+              <h3 className="font-Space Grotesk text-2xl text-glow mb-4">The Architect</h3>
+              <p className="text-foreground/80 font-inter text-lg leading-relaxed mb-4">
+                I’m Ujan — I build systems that are simple, intelligent, and designed to solve real problems at scale.
               </p>
-              <p className="text-foreground/80 font-rajdhani text-lg leading-relaxed">
-                With a passion for pushing technological boundaries and a deep respect 
-                for the power of great design, I create immersive web experiences that 
-                leave visitors in awe — much like stepping into a world where anything 
-                is possible.
+              <p className="text-foreground/80 font-rajdhani text-lg leading-relaxed mb-4">
+                My work focuses on tech that benefits society — tools for public infrastructure, community resilience, environmental insight, and solutions that governments and organizations can actually use. I’m currently deep into Machine Learning and Blockchain, exploring how these technologies can create cleaner workflows, smarter decision systems, and more transparent digital infrastructure.
+                
+              </p>
+               <p className="text-foreground/80 font-rajdhani text-glow leading-relaxed mb-4">
+                I like projects that matter: pragmatic, future-ready, and built with purpose.
+              </p>
+              <p className="text-foreground/80 font-rajdhani text-bold leading-relaxed">
+                I learn fast, iterate faster, and build with one goal — to create tech that genuinely helps people.
               </p>
             </div>
 
