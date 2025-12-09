@@ -17,6 +17,8 @@ export default {
         orbitron: ["Orbitron", "sans-serif"],
         rajdhani: ["Rajdhani", "sans-serif"],
         space: ["Space Grotesk", "sans-serif"],
+        bebas: ["Bebas Neue", "sans-serif"],
+        teko: ["Teko", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
